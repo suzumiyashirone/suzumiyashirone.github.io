@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/image.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="cygames,个人攻略," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="五分钟带你了解失落的龙约1.游戏机制   游戏机制总所周知为白猫like，手指滑动移动，点击攻击，除此外多了龙化。  龙化即字面意思变成龙去进行攻击并可以使用龙的skill；                       地图中也有结晶打破即可增加龙化槽  龙化槽蓄积需要打倒小怪或大怪与boss的一定血量掉出龙结晶来蓄积；而角色的技能则是靠平a次数来蓄积。 2.主线剧情   本格的RPG剧情，依旧是">
+<meta name="keywords" content="cygames,个人攻略">
+<meta property="og:type" content="article">
+<meta property="og:title" content="五分钟带你了解失落的龙约！">
+<meta property="og:url" content="http://yoursite.com/2018/10/01/dl/index.html">
+<meta property="og:site_name" content="suzumiyashirone&#39;s Blog">
+<meta property="og:description" content="五分钟带你了解失落的龙约1.游戏机制   游戏机制总所周知为白猫like，手指滑动移动，点击攻击，除此外多了龙化。  龙化即字面意思变成龙去进行攻击并可以使用龙的skill；                       地图中也有结晶打破即可增加龙化槽  龙化槽蓄积需要打倒小怪或大怪与boss的一定血量掉出龙结晶来蓄积；而角色的技能则是靠平a次数来蓄积。 2.主线剧情   本格的RPG剧情，依旧是">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/10/01/uploads/dl/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/01/uploads/dl/2.jpg">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/10.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/3.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/4.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/5.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/6.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/7.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/8.png">
+<meta property="og:image" content="d:/Blog/suzumiyashirone.github.io/source/uploads/dl/9.png">
+<meta property="og:updated_time" content="2018-10-01T02:40:11.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="五分钟带你了解失落的龙约！">
+<meta name="twitter:description" content="五分钟带你了解失落的龙约1.游戏机制   游戏机制总所周知为白猫like，手指滑动移动，点击攻击，除此外多了龙化。  龙化即字面意思变成龙去进行攻击并可以使用龙的skill；                       地图中也有结晶打破即可增加龙化槽  龙化槽蓄积需要打倒小怪或大怪与boss的一定血量掉出龙结晶来蓄积；而角色的技能则是靠平a次数来蓄积。 2.主线剧情   本格的RPG剧情，依旧是">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/01/uploads/dl/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/10/01/dl/"/>
+
+
+
+
+
+  <title>五分钟带你了解失落的龙约！ | suzumiyashirone's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">suzumiyashirone's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">suzumiyashirone</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/dl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Suzumiya Shirone">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="suzumiyashirone's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">五分钟带你了解失落的龙约！</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T01:05:10+08:00">
+                2018-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/手游/" itemprop="url" rel="index">
+                    <span itemprop="name">手游</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="五分钟带你了解失落的龙约"><a href="#五分钟带你了解失落的龙约" class="headerlink" title="五分钟带你了解失落的龙约"></a>五分钟带你了解失落的龙约</h1><h2 id="1-游戏机制"><a href="#1-游戏机制" class="headerlink" title="1.游戏机制"></a>1.游戏机制</h2><p>   游戏机制总所周知为白猫like，手指滑动移动，点击攻击，除此外多了龙化。<br> <img src="../uploads/dl/1.png" alt="Alt text"></p>
+<p>龙化即字面意思变成龙去进行攻击并可以使用龙的skill；</p>
+<blockquote>
+<p>   <img src="../uploads/dl/2.jpg" alt="Alt text">                  地图中也有结晶打破即可增加龙化槽</p>
+</blockquote>
+<p>龙化槽蓄积需要打倒小怪或大怪与boss的一定血量掉出龙结晶来蓄积；而角色的技能则是靠平a次数来蓄积。</p>
+<h2 id="2-主线剧情"><a href="#2-主线剧情" class="headerlink" title="2.主线剧情"></a>2.主线剧情</h2><p>   本格的RPG剧情，依旧是有明确的恶龙与身为勇士的“你”，孤独的主角（妹妹被掠走啦！）踏上行程邂逅伙伴。第五章打完<del>除了某位可爱的巨乳龙</del>并没有什么亮眼的东西。不过也不能判断以后会不会有什么神来之笔，毕竟妹妹黑化Ver能下手的地方很多，而且肯定涉及穿越时间了。靠目前这几章还可以说是值得期待。</p>
+<h2 id="3-游戏角色"><a href="#3-游戏角色" class="headerlink" title="3.游戏角色"></a>3.游戏角色</h2><p>   游戏角色分为5个属性，风火水光暗，主线剧情中会送五个属性的四星角色各一只；剩下的获得方法，当然是扭蛋了；以后估计活动也会有通关奖励角色。</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\10.png" alt="10">                                                       主线剧情赠送的主角一行    </p>
+</blockquote>
+<h4 id="角色强化："><a href="#角色强化：" class="headerlink" title="角色强化："></a>角色强化：</h4><h5 id="（1）マナサークル强化："><a href="#（1）マナサークル强化：" class="headerlink" title="（1）マナサークル强化："></a>（1）マナサークル强化：</h5><p>   通过消耗マナ增加角色的基础面板，攻和血；以及消耗マナ与相应素材解放主动与被动技能；一层的加点全部完成之后可界限突破开启下一层加点。<img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\3.png" alt="3"></p>
+<h5 id="（2）提升等级："><a href="#（2）提升等级：" class="headerlink" title="（2）提升等级："></a>（2）提升等级：</h5><p>提升等级可以直接加强角色的面板，有相应的狗粮本可以刷等级狗粮。</p>
+<h5 id="（3）强化装备的武器："><a href="#（3）强化装备的武器：" class="headerlink" title="（3）强化装备的武器："></a>（3）强化装备的武器：</h5><p>装备面板直接体现到角色上。</p>
+<h5 id="（4）强化装备的龙（更强的龙）："><a href="#（4）强化装备的龙（更强的龙）：" class="headerlink" title="（4）强化装备的龙（更强的龙）："></a>（4）强化装备的龙（更强的龙）：</h5><p>龙的面板影响角色，并且加护不懂提升不同。</p>
+<h5 id="（5）装备更好的护符："><a href="#（5）装备更好的护符：" class="headerlink" title="（5）装备更好的护符："></a>（5）装备更好的护符：</h5><p>依旧是面板，还有不同的技能对角色的影响。</p>
+<h2 id="4-武器系统"><a href="#4-武器系统" class="headerlink" title="4.武器系统"></a>4.武器系统</h2><p>  这游戏的武器强化后会得到不同的技能，又因在战斗时使用技能的过程角色直至技能动画结束都是无敌不掉血的，所以技能当然是多多益善。</p>
+<h4 id="武器制作："><a href="#武器制作：" class="headerlink" title="武器制作："></a>武器制作：</h4><p>（1）先造出5把素体，满突，喂满之后可以强化到下个阶段，不过强化到哪个状态肯定看你要转的属性（武器技能也不同）。</p>
+<p>（2）强化过后变为0破，需要重复5次（1）满突，再喂满，然后可以转属。</p>
+<p>（3）转属后依旧还是0破，再重复5次（2）,武器大概就算做完了。（这还只是3星武器）</p>
+<p>（4）武器制作开放条件是圣城里锻造屋的等级，锻造屋等级上限=圣城等级上限。</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\4.png" alt="4">                                                                        三星武器的武器树了解一下？</p>
+</blockquote>
+<h2 id="5-龙"><a href="#5-龙" class="headerlink" title="5.龙"></a>5.龙</h2><p>​    这游戏的龙可以直接类比到gbf里的召唤，龙和角色一样分为五个属性，龙身上有各种加护可以直接加给角色，同属性的龙配同属性的角色使用起来效果拔群！</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\5.png" alt="5"></p>
+<p>卡池的五星火龙可加强装备了的火角色40%攻击</p>
+</blockquote>
+<h4 id="龙的强化："><a href="#龙的强化：" class="headerlink" title="龙的强化："></a>龙的强化：</h4><p>圣域里种龙果树可收获强化果实；相同的龙则可以突破上限，突破上限后会加强加护效果（比如剧情火龙初始15%火角色攻击up，满突后变为20%）。</p>
+<h2 id="6-护符"><a href="#6-护符" class="headerlink" title="6.护符"></a>6.护符</h2><p>   护符会有乱七八糟各种各样的加成，属攻、技能伤害、背水、暴击率等….突破过程中还会有新加成习得。</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\6.png" alt="6">  </p>
+<p>护符突破次数与获得的相应加成</p>
+</blockquote>
+<h2 id="7-圣城与龙的庭院"><a href="#7-圣城与龙的庭院" class="headerlink" title="7.圣城与龙的庭院"></a>7.圣城与龙的庭院</h2><p>​     圣域就是所谓的小屋系统，可以建挖矿机挖卢比，建祭坛加强相应属性角色的攻击与血，以及龙祭坛加强对应属性龙的攻与血（目前未实装？），3章之后升级锻造屋开放武器制造，和没有任何卵用只是看着好看的装饰建筑。</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\7.png" alt="7">                                         圣城</p>
+</blockquote>
+<p>龙的庭院可以给龙送相应的东西加强信赖度，信赖度up后龙化时间延长，送礼后龙还会送回礼（关键素材龙爪获得方式）。</p>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\8.png" alt="8"></p>
+<h2 id="8-我到底要不要玩这个游戏？"><a href="#8-我到底要不要玩这个游戏？" class="headerlink" title="8.我到底要不要玩这个游戏？"></a>8.我到底要不要玩这个游戏？</h2><p>​     好了，到了最关键的，到底要不要入坑呢。</p>
+<p>​    首先这个游戏，不会很休闲，如果想以怪物弹珠那种上班地铁公交的时间搓一下的想法的话肯定是不行的。这游戏充斥了大量的可肝元素，又是cy开发，以后肯定会有限定的角色、武器、龙、护符本，（目前的无氪强力加护龙要刷试炼换掉20条之后 20条！解锁新龙副本换取30%up的大龙）除非是超重氪玩家才可以避免大部分肝的要素。</p>
+<p>​    其次，目前来看这游戏以后的发展方向会是高难度多人副本，如果休闲玩的话在副本刚开时肯定不会有人带，因为大家都忙着开荒，自己过都很难了，不会带菜鸡的。就像gbf大巴刚开一样，每个人都要填表，分配职业，背特动。而这个游戏的一个突破素材则是：</p>
+<blockquote>
+<p><img src="D:\Blog\suzumiyashirone.github.io\source\uploads\dl\9.png" alt="9"> gbf小巴里掉的道具</p>
+</blockquote>
+<p>并且每个月商店贩卖黑钢+jgj（突破任意武器龙上限），这不就是kmr明示了，乖乖交月费辣。</p>
+<p>​     综上，如果你是个又能肝又愿意每个月氪那么一点（头铁吴克其实也可以）又喜欢这类游戏的话又能每天抱着发热的手机或者滑动模拟器的话，是可以开心的玩这个游戏的；只想休闲没事滑滑屏幕舔舔妹纸消磨一下业余时间的话，其实也可以毕竟怎么玩都是自己的快乐（不过推荐隔壁怪物弹珠）；但是你每天只能摸个1-2h就去玩其他东西又想享受这个游戏的乐趣的话，我是不建议的，高强度游戏最有乐趣的还是享受变强的过程，与农新副本的乐趣，你每天一两个小时，新本是肯定进不去的，游戏热情慢慢的就没了，白白浪费很多时间。</p>
+<p>​    而我呢？有那个时间我还不如去打黄油呐！破游戏不能auto，怎么边打黄油边挂机嘛！</p>
+<p>​    感谢看到最后，希望能对你犹豫要不要蝗这个游戏起到帮助。</p>
+<p>以上图片资料均来自<a href="https://gamewith.jp/dragalialost" target="_blank" rel="noopener">gamewith</a>和<a href="https://appmedia.jp/dragalialost" target="_blank" rel="noopener">appmedia</a>。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cygames/" rel="tag"># cygames</a>
+          
+            <a href="/tags/个人攻略/" rel="tag"># 个人攻略</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/30/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Suzumiya Shirone</p>
+              <p class="site-description motion-element" itemprop="description">suzumiyashirone</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://weibo.com/6342714239/profile?rightmod=1&wvr=6&mod=personinfo" title="Weibo" target="_blank">Weibo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://bgm.tv/user/332607" title="Bangumi" target="_blank">Bangumi</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://plus.google.com/u/0/103763096849814610318" title="Google+" target="_blank">Google+</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#五分钟带你了解失落的龙约"><span class="nav-number">1.</span> <span class="nav-text">五分钟带你了解失落的龙约</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-游戏机制"><span class="nav-number">1.1.</span> <span class="nav-text">1.游戏机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-主线剧情"><span class="nav-number">1.2.</span> <span class="nav-text">2.主线剧情</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-游戏角色"><span class="nav-number">1.3.</span> <span class="nav-text">3.游戏角色</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#角色强化："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">角色强化：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#（1）マナサークル强化："><span class="nav-number">1.3.0.1.1.</span> <span class="nav-text">（1）マナサークル强化：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（2）提升等级："><span class="nav-number">1.3.0.1.2.</span> <span class="nav-text">（2）提升等级：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（3）强化装备的武器："><span class="nav-number">1.3.0.1.3.</span> <span class="nav-text">（3）强化装备的武器：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（4）强化装备的龙（更强的龙）："><span class="nav-number">1.3.0.1.4.</span> <span class="nav-text">（4）强化装备的龙（更强的龙）：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#（5）装备更好的护符："><span class="nav-number">1.3.0.1.5.</span> <span class="nav-text">（5）装备更好的护符：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-武器系统"><span class="nav-number">1.4.</span> <span class="nav-text">4.武器系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#武器制作："><span class="nav-number">1.4.0.1.</span> <span class="nav-text">武器制作：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-龙"><span class="nav-number">1.5.</span> <span class="nav-text">5.龙</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#龙的强化："><span class="nav-number">1.5.0.1.</span> <span class="nav-text">龙的强化：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-护符"><span class="nav-number">1.6.</span> <span class="nav-text">6.护符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-圣城与龙的庭院"><span class="nav-number">1.7.</span> <span class="nav-text">7.圣城与龙的庭院</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-我到底要不要玩这个游戏？"><span class="nav-number">1.8.</span> <span class="nav-text">8.我到底要不要玩这个游戏？</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Suzumiya Shirone</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
