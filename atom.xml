@@ -3,11 +3,11 @@
   <title>suzumiyashirone&#39;s Blog</title>
   
   <subtitle>エロゲーは人生</subtitle>
-  <link href="/suzumiyashirone.github.io/atom.xml" rel="self"/>
+  <link href="/child/atom.xml" rel="self"/>
   
-  <link href="https://suzumiyashirone.github.io/"/>
+  <link href="http://yoursite.com/child/"/>
   <updated>2018-10-21T16:29:40.016Z</updated>
-  <id>https://suzumiyashirone.github.io/</id>
+  <id>http://yoursite.com/child/</id>
   
   <author>
     <name>Suzumiya Shirone</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>五分钟带你了解失落的龙约！</title>
-    <link href="https://suzumiyashirone.github.io/2018/10/01/dragalialost/"/>
-    <id>https://suzumiyashirone.github.io/2018/10/01/dragalialost/</id>
+    <link href="http://yoursite.com/child/2018/10/01/dragalialost/"/>
+    <id>http://yoursite.com/child/2018/10/01/dragalialost/</id>
     <published>2018-09-30T17:05:10.412Z</published>
     <updated>2018-10-21T16:29:40.016Z</updated>
     
@@ -35,19 +35,19 @@
     
     </summary>
     
-      <category term="手游" scheme="https://suzumiyashirone.github.io/categories/%E6%89%8B%E6%B8%B8/"/>
+      <category term="手游" scheme="http://yoursite.com/child/categories/%E6%89%8B%E6%B8%B8/"/>
     
     
-      <category term="cygames" scheme="https://suzumiyashirone.github.io/tags/cygames/"/>
+      <category term="cygames" scheme="http://yoursite.com/child/tags/cygames/"/>
     
-      <category term="个人攻略" scheme="https://suzumiyashirone.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%94%BB%E7%95%A5/"/>
+      <category term="个人攻略" scheme="http://yoursite.com/child/tags/%E4%B8%AA%E4%BA%BA%E6%94%BB%E7%95%A5/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://suzumiyashirone.github.io/2014/08/13/hello-world/"/>
-    <id>https://suzumiyashirone.github.io/2014/08/13/hello-world/</id>
+    <link href="http://yoursite.com/child/2014/08/13/hello-world/"/>
+    <id>http://yoursite.com/child/2014/08/13/hello-world/</id>
     <published>2014-08-12T16:32:13.073Z</published>
     <updated>2018-09-30T15:09:37.571Z</updated>
     
