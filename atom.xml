@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://suzumiyashirone.github.io/"/>
-  <updated>2019-04-07T01:12:26.150Z</updated>
+  <updated>2019-04-19T06:13:13.846Z</updated>
   <id>http://suzumiyashirone.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将Linux塞进U盘</title>
+    <link href="http://suzumiyashirone.github.io/2019/04/19/manjaro-usb/"/>
+    <id>http://suzumiyashirone.github.io/2019/04/19/manjaro-usb/</id>
+    <published>2019-04-19T12:35:20.000Z</published>
+    <updated>2019-04-19T06:13:13.846Z</updated>
+    
+    <content type="html"><![CDATA[<p>这学期<a href="https://baike.baidu.com/item/%E6%9C%AC%E7%A7%91%E4%BA%8C%E5%AD%A6%E5%8E%86/1331390?fr=aladdin" target="_blank" rel="noopener">二学历</a>开了Linux，但是在机房上课总要用机房电脑里的<a href="https://ja.wikipedia.org/wiki/VirtualBox" target="_blank" rel="noopener">虚拟机</a>去启动<a href="http://www.redflag-linux.com/product/" target="_blank" rel="noopener">红旗Linux</a>系统才能进行操作。当然<a href="http://www.redflag-linux.com/product/" target="_blank" rel="noopener">红旗Linux</a>对于日常的学习是完全足够的。但是，如果能使用自己个性化之后的Linux来进行学习岂不是更加舒适。</p><p>所以，为什么我不把Linux装进U盘里呢？</p><h3 id="发行版选择-amp-U盘选择："><a href="#发行版选择-amp-U盘选择：" class="headerlink" title="发行版选择&amp;U盘选择："></a>发行版选择&amp;U盘选择：</h3><h4 id="发行版："><a href="#发行版：" class="headerlink" title="发行版："></a>发行版：</h4><p>经过一系列筛选，最终我的选择定在了<a href="https://www.ubuntulinux.jp/home" target="_blank" rel="noopener">Ubuntu</a>与<a href="https://manjaro.org/" target="_blank" rel="noopener">manjaro</a>之间，最后因为<a href="https://manjaro.org/" target="_blank" rel="noopener">manjaro</a>基于<a href="https://ja.wikipedia.org/wiki/Arch_Linux" target="_blank" rel="noopener">Arch Linux</a>有滚动更新的优势选择了<a href="https://manjaro.org/" target="_blank" rel="noopener">manjaro</a>的KDE版本。</p><h4 id="U盘："><a href="#U盘：" class="headerlink" title="U盘："></a>U盘：</h4><p>U盘我使用的是闪迪的<a href="https://detail.tmall.com/item.htm?spm=a1z10.5-b-s.w4011-15493431795.143.7b4415e9Gb0JUL&amp;id=544656834739&amp;rn=a2e8f42bebcbab5ff74405d100db4845&amp;abbucket=10" target="_blank" rel="noopener">cz800</a>。因为读写速度会对操作系统流畅度产生影响，毕竟万一不如老爷机里的虚拟机跑的流畅岂不是很尴尬。</p><h3 id="制作manjaro启动盘："><a href="#制作manjaro启动盘：" class="headerlink" title="制作manjaro启动盘："></a>制作manjaro启动盘：</h3><p>使用<a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a>制作USB启动盘。</p><p>具体设置如图。<img src="http://wx1.sinaimg.cn/large/006VfnIzly1g26mm3kjblj30bm0it3yy.jpg" alt=""></p><p>写入方式选择为<strong>DD模式</strong>。<img src="http://wx4.sinaimg.cn/large/006VfnIzly1g26mm40q3vj30f707h74p.jpg" alt=""></p><h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>将2个U盘插入PC，F12后选择启动盘。（USB启动可能要提前去bios中更改。）</p><p>进入启动盘后会出现以下界面。<img src="http://wx4.sinaimg.cn/large/006VfnIzly1g26n91x84tj30dy098aco.jpg" alt=""></p><h4 id="双显卡问题："><a href="#双显卡问题：" class="headerlink" title="双显卡问题："></a>双显卡问题：</h4><p>双显卡电脑在设置完直接安装的话会出现卡死的问题。<img src="http://wx3.sinaimg.cn/large/006VfnIzly1g26ne9cvjzj31z41404qp.jpg" alt=""></p><p>解决方法：</p><p>在安装界面红框标出的地方回车后输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drive=intel acpi_osi=! acpi_osi=&quot;Windows 2009&quot;</span><br></pre></td></tr></table></figure><p>输入完毕后ctrl+x，Boot。</p><p>之后便正常进入安装系统，按步骤操作即可。</p><h3 id="分区："><a href="#分区：" class="headerlink" title="分区："></a>分区：</h3><p>分区后剩余空间可格式化为<code>Fat32/NTFS</code>继续作为u盘使用。</p><h3 id="运行manjaro："><a href="#运行manjaro：" class="headerlink" title="运行manjaro："></a>运行manjaro：</h3><p>系统装好，重启运行，进入grub引导界面。</p><h4 id="双显卡问题：-1"><a href="#双显卡问题：-1" class="headerlink" title="双显卡问题："></a>双显卡问题：</h4><p>运行manjaro依旧会出现双显卡问题：输入密码登陆后卡死在加载界面，无法进入图形界面。</p><p>解决方案：</p><p>在grub引导界面时，在manjaro系统选项上时按E，在<code>quiet</code> 后空格输入<code>nouveau.modeset=0</code>。这一操作是为了开机默认不加载N卡，修改后ctrl+x进入系统。</p><p>进入系统后打开终端输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kate /boot/grub/grub.cfg</span><br></pre></td></tr></table></figure><p>搜索找到第一个<code>quiet</code> 后空格输入<code>nouveau.modeset=0</code>保存。</p><p>每次<strong>更新grub后</strong>都要重新更改grub文件。</p><p>当然你也可以选择安装N卡驱动，不过因为我玩游戏肯定会去win，就不搞了。</p><h3 id="软件安装："><a href="#软件安装：" class="headerlink" title="软件安装："></a>软件安装：</h3><p>系统装好也成功进入系统了，那么该安装日常应用了。</p><h4 id="改为国内源："><a href="#改为国内源：" class="headerlink" title="改为国内源："></a>改为国内源：</h4><p>修改<code>/etc/pacman.conf</code>，在最后添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">SigLevel = Optional TrustedOnly</span><br><span class="line">Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</span><br></pre></td></tr></table></figure><p>添加完毕后打开终端输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S archlinuxcn-keyring</span><br><span class="line">sduo pacman -Syy</span><br></pre></td></tr></table></figure><h4 id="安装chrome："><a href="#安装chrome：" class="headerlink" title="安装chrome："></a>安装chrome：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S google-chrome</span><br></pre></td></tr></table></figure><h4 id="安装搜狗输入法："><a href="#安装搜狗输入法：" class="headerlink" title="安装搜狗输入法："></a>安装搜狗输入法：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S fcitx fcitx-im</span><br><span class="line">yay -S fcitx-configtool</span><br><span class="line">yay -S fcitx-sogoupinyin</span><br></pre></td></tr></table></figure><p>之后运行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano 〜/ .xprofile</span><br></pre></td></tr></table></figure><p>在文件中添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GTK_IM_MODULE=fcitx</span><br><span class="line">export QT_IM_MODULE=fcitx</span><br><span class="line">export XMODIFIERS=”@im=fcitx”</span><br></pre></td></tr></table></figure><p>重启后即可使用中文输入法。我个人是很想尽可能的不使用国产软件的，可是找不到替代品。</p><h4 id="安装网易云音乐："><a href="#安装网易云音乐：" class="headerlink" title="安装网易云音乐："></a>安装网易云音乐：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S netease-cloud-music</span><br></pre></td></tr></table></figure><p>上课可以听歌摸鱼了！</p><h3 id="换个主题："><a href="#换个主题：" class="headerlink" title="换个主题："></a>换个主题：</h3><p>这里我照抄了<a href="https://www.cnblogs.com/luoshuitianyi/p/10587788.html" target="_blank" rel="noopener">洛水·锦依卫</a>老师的仿Mac os的主题更换。（买不起mac，用个皮肤总是可以的吧！）</p><p>最终效果如下。<img src="http://wx4.sinaimg.cn/large/006VfnIzly1g27wmik6r8j31hc0u0qv5.jpg" alt=""></p><p>Fin.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这学期&lt;a href=&quot;https://baike.baidu.com/item/%E6%9C%AC%E7%A7%91%E4%BA%8C%E5%AD%A6%E5%8E%86/1331390?fr=aladdin&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://suzumiyashirone.github.io/categories/Linux/"/>
+    
+    
+      <category term="manjaro" scheme="http://suzumiyashirone.github.io/tags/manjaro/"/>
+    
+      <category term="折腾" scheme="http://suzumiyashirone.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>こんな夏はもう、二度と来ない</title>
