@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="Suzumiya Shirone">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="Suzumiya Shirone">
+    
+    <meta name="keywords" content="suzumiyashirone">
+    
+    <meta name="description" content="suzumiyashirone">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>どうでもいいんだよ、気にすんなよ。 · suzumiyashirone&#39;s Blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href= "/assets/favicon1.ico" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-127763034-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >suzumiyashirone&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">どうでもいいんだよ、気にすんなよ。</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>suzumiyashirone's Blog</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:45vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/sakuranouta.PNG)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            どうでもいいんだよ、気にすんなよ。
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+                サクラノ詩
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "通关感想">通关感想</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "枕">枕</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">1.6k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/02/21</span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><strong>好久不见</strong>，这么说也没错吧。</p>
+<p>上次更新blog还是在去年11月，最后一次写黄油感想更是在去年7月，时隔半年让我把搁置了三年的《<a href="https://www.makura-soft.com/sakuranouta/" target="_blank" rel="noopener">樱之诗</a>》捡起来的原因竟然是汉化出了再不打就要被剧透了（苦笑）。</p>
+<p>《<a href="https://www.makura-soft.com/sakuranouta/" target="_blank" rel="noopener">樱之诗</a>》这部作品怎么评价呢，对我来说，成败都在于使用了“画”作为故事的主轴。我是一个俗人，既不懂绘画也不懂美术史，比起《xxx》画代表了画家的xxx的思想<del>，我更愿意去推上多看些日本画师的纸片人黄图</del>。</p>
+<p>所以对于这部作品真正想要表达的含义或者电波我可能是根本没有理解和接收到，但是作中某些部分与我这“俗人”得到了共鸣。</p>
+<p><strong>（以下有剧透）</strong></p>
+<hr>
+<h3 id="心："><a href="#心：" class="headerlink" title="心："></a>心：</h3><blockquote>
+<p>What is mind？ 心ってなんだよ？   #心是什么？</p>
+<p>No matter.  どうでもいいんだよ。  #是什么都无所谓啊。</p>
+<p>What is matter？ 物ってなんだよ？ #物是什么。</p>
+<p>Never mind.  気にすんなよ。            #不要在意呀。</p>
+</blockquote>
+<p>心为何物，其实在作中就已经给出答案了。</p>
+<p><img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-02.PNG" alt=""></p>
+<p>心和身体本是一种物体，都是由碳基结构构成“人体”。</p>
+<p>而“心”真正代表的是“人”。</p>
+<h4 id="因果的交流電燈："><a href="#因果的交流電燈：" class="headerlink" title="因果的交流電燈："></a>因果的交流電燈：</h4><blockquote>
+<p>人は１人じゃ生きられない。</p>
+</blockquote>
+<p>我第一次见到这句话是在《<a href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%AF%E3%83%AD%E3%82%B97" target="_blank" rel="noopener">超时空要塞7</a>》的《<a href="https://music.163.com/song?id=22788819&amp;userid=92838550" target="_blank" rel="noopener">Power To The Dream</a>》的歌词中，从此这句话便成了我常常提到的一句话。</p>
+<p>这句话我并没有从字面的意思上去理解，而是“人”无法一个人活下去。</p>
+<p>孤儿被丢弃在荒野被狼喂养成人，但最后成为究竟还能不能称为“人”。</p>
+<p>“人”是无法自己成长的，身边人的每一句话，接触到的各种事物，都是将我们塑造成“人”的拼图。<img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-01.PNG" alt=""></p>
+<p>就像男主说的一样，人的价值观不是依靠自我就能成型的，所有接触到的人和事物都对人产生影响。</p>
+<p>因果的交流電燈，每个人都是在相互交流接触时得到成长，一个人是什么都“学不到”的，而“心”大概就是最后成型的“人”。</p>
+<h3 id="离别："><a href="#离别：" class="headerlink" title="离别："></a>离别：</h3><blockquote>
+<p>在这里有两个天才。</p>
+<p>两位天才相互竞争，目标是一起成为世界顶级的画家。</p>
+<p>但发生了一次意外，一位天才为了挽救别人的性命，一次一次的削减自己的才能，最后失去了才能。</p>
+<p>而另一位天才却一直等着他拾起画笔。</p>
+<p>终于，在另一位天才的影响下，天才又捡起了画笔，同时站在了最高的舞台上进行对决。</p>
+<p>天才败了下来，在天才敬佩对手画出如此震撼的作品时，噩耗传来，另一位天才在前往颁奖典礼的路上发生意外去世了。</p>
+<p>后悔，为什么没早点回应他，他甚至没有看到“我”的复归作。</p>
+</blockquote>
+<h4 id="生死观："><a href="#生死观：" class="headerlink" title="生死观："></a>生死观：</h4><p>人总是这样，对于意外的事，总是再失去后后悔，因为失去之后将无法再为他做任何事。</p>
+<p>男主在整篇作品中送走了3个人，但是却在挚友&amp;劲敌去世后受到的打击最大。</p>
+<p>母亲去世时，男主为母亲献上了《樱日狂想》。</p>
+<p>父亲去世前，男主作的《樱六相图》被父亲称作是为自己献上的墓志铭。<img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-03.PNG" alt=""></p>
+<p>然而对于挚友，男主什么都没能做到，就连最后为了与他“对决”所作的复归作挚友都没能看到。</p>
+<p>人，总是像笨蛋一样，在失去时才想着如何补偿，在失去后才后悔。</p>
+<h3 id="创作者："><a href="#创作者：" class="headerlink" title="创作者："></a>创作者：</h3><p>创作者与“商人”只有一纸之隔。</p>
+<p>就像在第二章男主被明石指责的一样。<img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-04.PNG" alt=""></p>
+<blockquote>
+<p>”你到底知不知道制作作品的意义。“</p>
+<p>”对于你来说，是为了（让自己）被更多人知道才做的作品？是为了让媒体沸腾而做的作品吗？</p>
+</blockquote>
+<h4 id="成长："><a href="#成长：" class="headerlink" title="成长："></a>成长：</h4><p>在挚友去世的多年后，当大家一起制作的壁画被“改造”炒作的时候，男主再次行动了起来。</p>
+<p>而这次男主心甘情愿的将作品挂名给了其他团体。<img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-05.PNG" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-06.PNG" alt=""></p>
+<p>从学生时代的不解，到现在把想法教授给自己的学生，男主第一次作为“创作者”制作了作品。并懂得了人在最痛苦的时候才能感受到自己活着的实感。</p>
+<p><img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/sakuranouta-07.PNG" alt=""></p>
+<hr>
+<h3 id="尾巴："><a href="#尾巴：" class="headerlink" title="尾巴："></a>尾巴：</h3><p>如同开头我说的一样，我是个俗人，并且是个高中时代三门文科加起来没有物理考的高的文科废物，大学理所应当的成了工科生。</p>
+<p>让我在作品中理解什么哲学，文学，艺术大概是强人所难，所以我只能在作品中找出与我有着共鸣的地方。如果你也在作品中感受到了的话，不胜荣幸。</p>
+<p>当然，对一种事物，一万个人有一万种看法，我一向以来的观点都是解读作品的是读者自身，看法不同你也可以在评论交流。</p>
+<p>《樱之诗》这部作品，要我打分的话目前应该是85，为什么？毕竟它是个“半成品”啊！就像没有RECORDARE的《baldr sky》，没有《<a href="https://suzumiyashirone.github.io/2019/01/21/rance-series/">兰斯10</a>》的兰斯系列，没有《天之少女》的壳少系列，<del>没有天结2的天结</del> 。并且前面2章（除了作壁画）跟前两条线，是真的好无聊啊！画家跟画我根本看不懂啊！前两章的无聊大概是我搁置了两年的最大原因，要不是厨子空间90台我大概是会弃掉这作的。不过后期伏笔回收跟剧情发力配合的很好，并有能引起我共鸣的片段，所以最终打了85。</p>
+<p>最后再说一次，好久不见。2月新作马上就要来了，3月也有很多想打的新作，今年blog更新应该会充足一些。</p>
+<p>不过现实中也差不多该忙起来了，马上就大四了，到底是争取推荐还是就业目前我还没有答案，上一次努力还是六年前的中考，或许我也该再订个小目标体验一下“生存的实感”了吧。</p>
+
+    </article>
+    <!-- license  -->
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/11/12/school-network/" title= "利用树莓派做代理服务器逃过校园网检测">
+                    <div class="prevTitle">利用树莓派做代理服务器逃过校园网检测</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC80MDQ0Mi8xNjk2OQ==>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:suzumiyashirone@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="https://weibo.com/6342714239/profile?rightmod=1&wvr=6&mod=personinfo" class="iconfont-archer weibo" target="_blank" title=weibo></a>
+            
+        
+    
+        
+            
+                <a href="http://bgm.tv/user/332607" class="iconfont-archer bangumi" target="_blank" title=bangumi></a>
+            
+        
+    
+        
+            
+                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title=rss></a>
+            
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:45vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#心："><span class="toc-number">1.</span> <span class="toc-text">心：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#因果的交流電燈："><span class="toc-number">1.1.</span> <span class="toc-text">因果的交流電燈：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#离别："><span class="toc-number">2.</span> <span class="toc-text">离别：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#生死观："><span class="toc-number">2.1.</span> <span class="toc-text">生死观：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创作者："><span class="toc-number">3.</span> <span class="toc-text">创作者：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#成长："><span class="toc-number">3.1.</span> <span class="toc-text">成长：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#尾巴："><span class="toc-number">4.</span> <span class="toc-text">尾巴：</span></a></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 21
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2020/02/21/sakuranouta/" >どうでもいいんだよ、気にすんなよ。</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2019/11/12/school-network/" >利用树莓派做代理服务器逃过校园网检测</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/11</span><a class="archive-post-title" href= "/2019/11/11/diy-monitors/" >300块的“便携”显示器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/14</span><a class="archive-post-title" href= "/2019/08/14/kansai-trip-part3/" >我在关西晒成了尼哥·part3</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/09</span><a class="archive-post-title" href= "/2019/08/09/kansai-trip-part2/" >我在关西晒成了尼哥·part2</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span><a class="archive-post-title" href= "/2019/08/07/granbluefantasy/" >或许是最好玩的手游——granbluefantasy</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span><a class="archive-post-title" href= "/2019/08/07/kansai-trip-part1/" >我在关西晒成了尼哥·part1</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/2019/07/08/tsukikana/" >人生没有后悔药，但黄油有</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/29</span><a class="archive-post-title" href= "/2019/05/29/dies-irae/" >さぁ、私に未知を見せてくれ</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span><a class="archive-post-title" href= "/2019/04/19/manjaro-usb/" >将Linux塞进U盘</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2019/04/06/aonatsu/" >こんな夏はもう、二度と来ない</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/12</span><a class="archive-post-title" href= "/2019/03/12/swallowtail/" >我被more体验版欺诈的这档子事</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/06</span><a class="archive-post-title" href= "/2019/03/06/evenicle2/" >用下体注射拯救世界</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2019/02/01/astraea/" >我竟然在黄油里打牌</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/21</span><a class="archive-post-title" href= "/2019/01/21/rance-series/" >黄油里的魔兽世界</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/08</span><a class="archive-post-title" href= "/2018/12/08/fuukan/" >差别、歧视、价值观不同导致的必然结果</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/27</span><a class="archive-post-title" href= "/2018/11/27/syukugar1/" >我的宿星女友不可能这么可爱！</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/17</span><a class="archive-post-title" href= "/2018/11/17/atropos/" >时间静止却不能雷普？我要这破表有何用？</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2018/11/12/sosaara/" >ソーサレス＊アライヴ！</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/03</span><a class="archive-post-title" href= "/2018/11/03/nukitashi/" >抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/09</span><a class="archive-post-title" href= "/2017/07/09/hello-world/" >Hello World</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="Hulotte"><span class="iconfont-archer">&#xe606;</span>Hulotte</span>
+    
+        <span class="sidebar-tag-name" data-tags="通关感想"><span class="iconfont-archer">&#xe606;</span>通关感想</span>
+    
+        <span class="sidebar-tag-name" data-tags="Digital Cute"><span class="iconfont-archer">&#xe606;</span>Digital Cute</span>
+    
+        <span class="sidebar-tag-name" data-tags="play感想"><span class="iconfont-archer">&#xe606;</span>play感想</span>
+    
+        <span class="sidebar-tag-name" data-tags="GIGA"><span class="iconfont-archer">&#xe606;</span>GIGA</span>
+    
+        <span class="sidebar-tag-name" data-tags="AliceSoft"><span class="iconfont-archer">&#xe606;</span>AliceSoft</span>
+    
+        <span class="sidebar-tag-name" data-tags="Eukleia"><span class="iconfont-archer">&#xe606;</span>Eukleia</span>
+    
+        <span class="sidebar-tag-name" data-tags="light"><span class="iconfont-archer">&#xe606;</span>light</span>
+    
+        <span class="sidebar-tag-name" data-tags="缅怀、上香"><span class="iconfont-archer">&#xe606;</span>缅怀、上香</span>
+    
+        <span class="sidebar-tag-name" data-tags="旅行"><span class="iconfont-archer">&#xe606;</span>旅行</span>
+    
+        <span class="sidebar-tag-name" data-tags="记录"><span class="iconfont-archer">&#xe606;</span>记录</span>
+    
+        <span class="sidebar-tag-name" data-tags="manjaro"><span class="iconfont-archer">&#xe606;</span>manjaro</span>
+    
+        <span class="sidebar-tag-name" data-tags="折腾"><span class="iconfont-archer">&#xe606;</span>折腾</span>
+    
+        <span class="sidebar-tag-name" data-tags="枕"><span class="iconfont-archer">&#xe606;</span>枕</span>
+    
+        <span class="sidebar-tag-name" data-tags="Qruppo"><span class="iconfont-archer">&#xe606;</span>Qruppo</span>
+    
+        <span class="sidebar-tag-name" data-tags="tone work’s"><span class="iconfont-archer">&#xe606;</span>tone work’s</span>
+    
+        <span class="sidebar-tag-name" data-tags="Fluorite"><span class="iconfont-archer">&#xe606;</span>Fluorite</span>
+    
+        <span class="sidebar-tag-name" data-tags="吐槽"><span class="iconfont-archer">&#xe606;</span>吐槽</span>
+    
+        <span class="sidebar-tag-name" data-tags="MORE"><span class="iconfont-archer">&#xe606;</span>MORE</span>
+    
+        <span class="sidebar-tag-name" data-tags="mirai"><span class="iconfont-archer">&#xe606;</span>mirai</span>
+    
+        <span class="sidebar-tag-name" data-tags="cygames"><span class="iconfont-archer">&#xe606;</span>cygames</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="黄油"><span class="iconfont-archer">&#xe60a;</span>黄油</span>
+    
+        <span class="sidebar-category-name" data-categories="生活"><span class="iconfont-archer">&#xe60a;</span>生活</span>
+    
+        <span class="sidebar-category-name" data-categories="Linux"><span class="iconfont-archer">&#xe60a;</span>Linux</span>
+    
+        <span class="sidebar-category-name" data-categories="手游"><span class="iconfont-archer">&#xe60a;</span>手游</span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "Suzumiya Shirone"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/histoire.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"log":false});</script></body>
+</html>
+
+
