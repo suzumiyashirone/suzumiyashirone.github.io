@@ -22,7 +22,7 @@
     <meta name="description" content="suzumiyashirone">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>suzumiyashirone&#39;s Blog</title>
+    <title>使用jsDelivr的CDN给github图床加速 · suzumiyashirone&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -214,12 +214,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >suzumiyashirone&#39;s Blog</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">使用jsDelivr的CDN给github图床加速</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>suzumiyashirone's Blog</a>
 </header>
@@ -231,24 +242,71 @@
 
 
 
+
+height:45vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/404-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            使用jsDelivr的CDN给github图床加速
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+                更好的薅羊毛
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "折腾">折腾</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">202</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/04/16</span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -349,44 +407,66 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/04/19/manjaro-usb/" >
-            
-                <span>将Linux塞进U盘</span>
-        </a>
-        <div class="abstract-content">
-            这学期二学历开了Linux，但是在机房上课总要用机房电脑里的虚拟机去启动红旗Linux系统才能进行操作。当然红旗Linux对于日常的学习是完全足够的。但是，如果能使用自己个性化之后的Linux来进行学习岂不是更加舒适。
-所以，为什么我不把Linux装进U盘里呢？
-发行版选择&amp;U盘选择：发行版：经过一系列筛选，最终我的选择定在了Ubuntu与manjaro之间，最后因为manjaro基于Arch Linux有滚动更新的优势选择了manjaro的KDE版本。
-U盘：U盘我使用的是闪迪的cz800。因为读写速度会对操作系统流畅度产生影响，毕竟万一不如老爷机里的虚拟机跑的流畅岂不是很尴尬...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "折腾">折腾</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "manjaro">manjaro</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <p>自从换了github图床之后，我发现图片加载速度实在是过于慢，甚至不挂梯加载不出图片。</p>
+<p>搜了一下可以使用jsDelivr的CDN来给图床加速，看了看也挺简单的。如果你用的是<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">picgo</a>这个图床上传软件基本可以一步到位完成加速。</p>
+<p>picgo的相关使用可以参照破先生的——《<a href="https://pockies.github.io/2019/04/27/weibo-to-github/" target="_blank" rel="noopener">利用PicGo快速迁移Weibo外链图片到GitHub</a>》。</p>
+<h3 id="picgo端设置："><a href="#picgo端设置：" class="headerlink" title="picgo端设置："></a>picgo端设置：</h3><p>在自定义域名内填入<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code> 。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/suzumiyashirone/picture/speed-up-by-jsDelivr_01.png" alt=""></p>
+<p>完成此设置之后在使用picgo上传图像时会自动替换外链。</p>
+<h3 id="更新旧博文外链："><a href="#更新旧博文外链：" class="headerlink" title="更新旧博文外链："></a>更新旧博文外链：</h3><p>使用Typora的替换将旧链替换。<img src="https://cdn.jsdelivr.net/gh/suzumiyashirone/picture/speed-up-by-jsDelivr_02.png" alt=""></p>
+<p>至此就完成了github图床的加速。</p>
+<ul>
+<li>参考： <a href="https://segmentfault.com/a/1190000020240864" target="_blank" rel="noopener">GitHub+jsDelivr+PicGo搭建免费图床</a> 。</li>
+</ul>
+
     </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/04/16/koitate/" title= "这些杀手不太冷">
+                    <div class="prevTitle">这些杀手不太冷</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC80MDQ0Mi8xNjk2OQ==>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -433,6 +513,24 @@ U盘：U盘我使用的是闪迪的cz800。因为读写速度会对操作系统�
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:45vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#picgo端设置："><span class="toc-number">1.</span> <span class="toc-text">picgo端设置：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新旧博文外链："><span class="toc-number">2.</span> <span class="toc-text">更新旧博文外链：</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1063,6 +1161,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/histoire.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false},"log":false});</script></body>
 </html>
