@@ -414,7 +414,7 @@ height:45vh;
 <p>很显然校运营商为了让学生人手一个账号也是“尽心尽力”，不过很显然，只要是人做出的检测就肯定有能绕过的方法，而最安全的稳定的方法毫无疑问是代理服务器。</p>
 <p>经过我的电脑一周未关机的测试之后，我决定去闲鱼捡一个树莓派做代理然后通过二级路由做全局代理实现方便快捷的宿舍“局域网”。</p>
 <h3 id="网路设计："><a href="#网路设计：" class="headerlink" title="网路设计："></a>网路设计：</h3><p>首先要先设想出大概的ip分配以及设备连接方式。</p>
-<p><img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/school-network-01.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/suzumiyashirone/picture/school-network-01.png" alt=""></p>
 <p>首先树莓派通过<code>以太网接口</code>连接宿舍内的有线，之后通过usb无线网卡连接至<code>路由器A</code> 。</p>
 <p>在路由器A中给树莓派的<code>usb无线网卡</code>通过mac地址绑定设置<code>静态ip</code> ：192.168.1.2，在树莓派中为ss服务器端设置端口为192.168.1.2。</p>
 <p>然后通过网线将路由器A的<code>LAN口</code>连接至路由器B的<code>WAN口</code>，<strong>AB路由器ip不能为同一网段</strong>，B路由器刷老毛子内核设置ss全局代理走树莓派的端口。</p>
@@ -424,8 +424,8 @@ height:45vh;
 <h3 id="Linux下的校园网登录："><a href="#Linux下的校园网登录：" class="headerlink" title="Linux下的校园网登录："></a>Linux下的校园网登录：</h3><p>设备全部搞好了，问题是linux下校园网登录不像win一样会弹出网页。</p>
 <p>这里使用python+requests库即可实现登录。</p>
 <p>首先我们在win中使用浏览器打开登录页面，f12后可以看到。</p>
-<p><img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/school-network-02.png" alt=""></p>
-<p>之后点开loginbox查看登录所需要的数据。<img src="https://raw.githubusercontent.com/suzumiyashirone/picture/master/school-network-03.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/suzumiyashirone/picture/school-network-02.png" alt=""></p>
+<p>之后点开loginbox查看登录所需要的数据。<img src="https://cdn.jsdelivr.net/gh/suzumiyashirone/picture/school-network-03.png" alt=""></p>
 <p>查看完post数据之后就可以开搞了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#请求地址</span><br><span class="line">url=&quot;http://210.29.79.141/a79.htm&quot; </span><br><span class="line"> </span><br><span class="line">#构造请求头</span><br><span class="line">headers =  &#123;&apos;Accept&apos;: &apos;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3&apos;,</span><br><span class="line">         &apos;Accept-Encoding&apos;: &apos;gzip, deflate&apos;,</span><br><span class="line">         &apos;Accept-Language&apos;: &apos;zh-CN,zh;q=0.8&apos;,</span><br><span class="line">         &apos;User-Agent&apos;: &apos;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Mobile Safari/537.36&apos;&#125;</span><br><span class="line"> </span><br><span class="line">#构造表单数据</span><br><span class="line">formdata=&#123;</span><br><span class="line">    &quot;action&quot;:&quot;login&quot;,</span><br><span class="line">    &quot;authtype&quot;:&quot;3&quot;,     #运营商</span><br><span class="line">    &quot;authloginIP&quot;:&quot; &quot;     #查看被学校分配的ip填入</span><br><span class="line">    &quot;authuserfield&quot;:&quot;*******&quot;, </span><br><span class="line">    &quot;authpassfield&quot;:&quot;*******&quot;,</span><br><span class="line">    &quot;ac_id&quot;:&quot;1&quot;,</span><br><span class="line">    &quot;save_me&quot;:&quot;0&quot;,</span><br><span class="line">    &quot;ajax&quot;:&quot;1&quot;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">#使用post方法提交表单数据</span><br><span class="line">response = requests.post(url, data = formdata, headers = headers)</span><br><span class="line"> </span><br><span class="line">#检测是否登录成功</span><br><span class="line">if &apos;login_ok&apos; in response.text:</span><br><span class="line">    print(&quot;登录成功&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(response.text[:30])</span><br></pre></td></tr></table></figure>
 <p>运行脚本显示登陆成功，即可。</p>
@@ -566,24 +566,6 @@ top:45vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -1048,17 +1030,25 @@ top:45vh;
     
         <span class="sidebar-tag-name" data-tags="通关感想"><span class="iconfont-archer">&#xe606;</span>通关感想</span>
     
-        <span class="sidebar-tag-name" data-tags="Hulotte"><span class="iconfont-archer">&#xe606;</span>Hulotte</span>
-    
         <span class="sidebar-tag-name" data-tags="TOKYOTOON"><span class="iconfont-archer">&#xe606;</span>TOKYOTOON</span>
     
         <span class="sidebar-tag-name" data-tags="GIGA"><span class="iconfont-archer">&#xe606;</span>GIGA</span>
+    
+        <span class="sidebar-tag-name" data-tags="Hulotte"><span class="iconfont-archer">&#xe606;</span>Hulotte</span>
+    
+        <span class="sidebar-tag-name" data-tags="折腾"><span class="iconfont-archer">&#xe606;</span>折腾</span>
     
         <span class="sidebar-tag-name" data-tags="Digital Cute"><span class="iconfont-archer">&#xe606;</span>Digital Cute</span>
     
         <span class="sidebar-tag-name" data-tags="play感想"><span class="iconfont-archer">&#xe606;</span>play感想</span>
     
+        <span class="sidebar-tag-name" data-tags="light"><span class="iconfont-archer">&#xe606;</span>light</span>
+    
+        <span class="sidebar-tag-name" data-tags="缅怀、上香"><span class="iconfont-archer">&#xe606;</span>缅怀、上香</span>
+    
         <span class="sidebar-tag-name" data-tags="AliceSoft"><span class="iconfont-archer">&#xe606;</span>AliceSoft</span>
+    
+        <span class="sidebar-tag-name" data-tags="cygames"><span class="iconfont-archer">&#xe606;</span>cygames</span>
     
         <span class="sidebar-tag-name" data-tags="Eukleia"><span class="iconfont-archer">&#xe606;</span>Eukleia</span>
     
@@ -1066,29 +1056,21 @@ top:45vh;
     
         <span class="sidebar-tag-name" data-tags="记录"><span class="iconfont-archer">&#xe606;</span>记录</span>
     
-        <span class="sidebar-tag-name" data-tags="折腾"><span class="iconfont-archer">&#xe606;</span>折腾</span>
-    
-        <span class="sidebar-tag-name" data-tags="manjaro"><span class="iconfont-archer">&#xe606;</span>manjaro</span>
+        <span class="sidebar-tag-name" data-tags="Qruppo"><span class="iconfont-archer">&#xe606;</span>Qruppo</span>
     
         <span class="sidebar-tag-name" data-tags="枕"><span class="iconfont-archer">&#xe606;</span>枕</span>
     
-        <span class="sidebar-tag-name" data-tags="light"><span class="iconfont-archer">&#xe606;</span>light</span>
-    
-        <span class="sidebar-tag-name" data-tags="缅怀、上香"><span class="iconfont-archer">&#xe606;</span>缅怀、上香</span>
+        <span class="sidebar-tag-name" data-tags="manjaro"><span class="iconfont-archer">&#xe606;</span>manjaro</span>
     
         <span class="sidebar-tag-name" data-tags="Fluorite"><span class="iconfont-archer">&#xe606;</span>Fluorite</span>
     
         <span class="sidebar-tag-name" data-tags="吐槽"><span class="iconfont-archer">&#xe606;</span>吐槽</span>
     
-        <span class="sidebar-tag-name" data-tags="Qruppo"><span class="iconfont-archer">&#xe606;</span>Qruppo</span>
-    
         <span class="sidebar-tag-name" data-tags="MORE"><span class="iconfont-archer">&#xe606;</span>MORE</span>
-    
-        <span class="sidebar-tag-name" data-tags="tone work’s"><span class="iconfont-archer">&#xe606;</span>tone work’s</span>
     
         <span class="sidebar-tag-name" data-tags="mirai"><span class="iconfont-archer">&#xe606;</span>mirai</span>
     
-        <span class="sidebar-tag-name" data-tags="cygames"><span class="iconfont-archer">&#xe606;</span>cygames</span>
+        <span class="sidebar-tag-name" data-tags="tone work’s"><span class="iconfont-archer">&#xe606;</span>tone work’s</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1127,9 +1109,9 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="生活"><span class="iconfont-archer">&#xe60a;</span>生活</span>
     
-        <span class="sidebar-category-name" data-categories="Linux"><span class="iconfont-archer">&#xe60a;</span>Linux</span>
-    
         <span class="sidebar-category-name" data-categories="手游"><span class="iconfont-archer">&#xe60a;</span>手游</span>
+    
+        <span class="sidebar-category-name" data-categories="Linux"><span class="iconfont-archer">&#xe60a;</span>Linux</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
